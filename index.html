@@ -15,6 +15,251 @@
     <script src="main.js" defer></script>
 </head>
 <body>
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="navbar__logo">
+            <img src="imgs/blue-planet.png" alt="">
+            <a href="#">Boram</a>
+        </div>
+        
+        <ul class="navbar__menu">
+            <li class="navbar__menu__item">Home</li>
+            <li class="navbar__menu__item">About</li>
+            <li class="navbar__menu__item">Skills</li>
+            <li class="navbar__menu__item">My work</li>
+            <li class="navbar__menu__item">Testimonials</li>
+            <li class="navbar__menu__item">Contact</li>
+        </ul>
+    </nav>
+    <!-- Home -->
+    <section id="home">
+        <img src="/imgs/my_picture.png" alt="Boram's profile photo" class="home__avatar">
+        <h1 class="home__title">Hello, <br> I'm Dream Coder</h1>
+        <h2 class="home__description">A Frontend Software Engineer Beginner </h2>
+        <button class="home__contact">Contact me</button>
+    </section>
     
+    <!-- About -->
+    <section id="about">
+        <h1>About me</h1>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <div class="about__majors">
+            <div class="major">
+                <div class="major__icon"><i class="fab fa-html5"></i></div>
+                <div class="major__title">Front-end</div>
+                <div class="major__description">HTML, CSS, Javascript, Typescript, React, Vue</div>
+            </div>
+            <div class="major">
+                <div class="major__icon"><i class="fas fa-quidditch"></i></div>
+                <div class="major__title">UI & UX</div>
+                <div class="major__description">Phigma, Photoshop</div>
+            </div>
+            <div class="major">
+                <div class="major__icon"><i class="fas fa-server"></i></div>
+                <div class="major__title">Back-end</div>
+                <div class="major__description">Java, Javascript, C, Python, Nodejs, Django</div>
+            </div>
+        </div>
+        <div class="about__jobs">
+            <div class="job">
+                <img src="/imgs/university_logo.png" alt="" class="job__logo">
+                <p class="job__name">Hankuk University of Foreign Studies - major Russian</p>
+                <p class="job__period">2018 March - 2022 June</p>
+            </div>
+            <div class="job">
+                <img src="/imgs/university_logo.png" alt="" class="job__logo">
+                <p class="job__name">Hankuk University of Foreign Studies - major Software</p>
+                <p class="job__period">2019 March - 2022 June</p>
+            </div>
+        </div>
+    </section>
+    <!-- Skills -->
+    <section id="skills">
+        <h1>Skills</h1>
+        <h2>Skills & Attribute</h2>
+        <p>Experience with all phases of the software life-cycle. 
+            passion for learning new technologies. Capable of <br>
+            working within a team envionment and independently. Ability to
+            plan and time schedule, work under <br>
+            strcit time pressure and adapt quickly when needed.
+        </p>
+        <div class="skillset">
+            <div class="skillset__left">
+                <h3 class="skillset__title">Skills</h3>
+                <div class="skills">
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>HTML</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__percet"></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>CSS</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill__percet"></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Javascript</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill__percet"></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>Typescript</span>
+                            <span>10%</span>
+                        </div>
+                        <div class="skill__percet"></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>React</span>
+                            <span>3%</span>
+                        </div>
+                        <div class="skill__percet"></div>
+                    </div>
+                    <div class="skill">
+                        <div class="skill__description">
+                            <span>C/C++</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill__percet"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="skillset__right">
+                <div class="tools">
+                    <h3 class="skillset__title">tools</h3>
+                    <ul class="tools__list">
+                        <li>
+                            <sapn>Visual studio code</sapn>
+                        </li>
+                        <li>
+                            <sapn>Visual studio</sapn>
+                        </li>
+                    </ul>
+                </div>
+                <div class="etc">
+                    <h3 class="skillset__title">etc</h3>
+                    <ul class="etc__list">
+                        <li><span>Git</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Work -->
+    <section id="work">
+        <h1>My work</h1>
+        <p>Projects</p>
+        <div class="work__categories">
+            <button class="category__btn">All<span class="category__count">8</span></button>
+            <button class="category__btn">Front-en<span class="category__count">3</span></button>
+            <button class="category__btn">UI & UX<span class="category__count">3</span></button>
+            <button class="category__btn">Back-end<span class="category__count">2</span></button>
+        </div>
+        <div class="work__projects">
+            
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project1.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project2.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project3.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project4.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project5.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project6.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project7.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            <div class="project">
+                <a href="" class="project__git"></a>
+                <img src="imgs/project8.png" alt="" class="project__img">
+                <h3>Youtube Site</h3>
+                <span>Clone coding with HTML</span>
+            </div>
+            
+        </div>
+
+
+    </section>
+    <!-- Testimonials -->
+    <section id="testimonials">
+        <h1>Testimonials</h1>
+        <p>See what they say about me</p>
+        <div class="testimonial">
+            <img src="/imgs/person.jpg" alt="" class="testimonial__avatar">
+            <div class="testimonial__speech">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Non, distinctio rerum dolore et impedit placeat molestias 
+                    ullam voluptatibus! Tempora est laborum qui animi quaerat molestias aliquam, 
+                    incidunt a ipsum quasi?</p>
+                <div class="person"><a href="">Ellie</a> / TigerSpike</div>   
+            </div>
+        </div>
+        <div class="testimonial">
+            <img src="/imgs/person.jpg" alt="" class="testimonial__avatar">
+            <div class="testimonial__speech">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Non, distinctio rerum dolore et impedit placeat molestias 
+                    ullam voluptatibus! Tempora est laborum qui animi quaerat molestias aliquam, 
+                    incidunt a ipsum quasi?</p>
+                <div class="person"><a href="">Ellie</a> / TigerSpike</div>   
+            </div>
+        </div>
+
+
+    </section>
+    <!-- Contact -->
+    <section id="contact">
+        <h1 class="contact__title">Let's talk</h1>
+        <h2 class="contact__email">boram2445@naver.com</h2>
+        <div class="contact__icons">
+            <a href="https://github.com/boram2445" target="_blank"><i class="fab fa-github"></i></a>
+            <a href=""><i class="fab fa-linkedin"></i></a>
+            <p class="contact__rights">
+                2020 Boram Kim - All rights reserved
+            </p>
+        </div>
+
+
+
+    </section>
 </body>
 </html>
