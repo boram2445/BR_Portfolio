@@ -53,6 +53,7 @@ ul {
 button {
   cursor: pointer;
   background-color: transparent;
+  border: none;
   outline: none;
 }
 
@@ -172,7 +173,6 @@ a {
 /* Section Common */
 .section {
   text-align: center;
-
   margin: auto;
 }
 
@@ -424,8 +424,9 @@ a {
   width: 30px;
   height: 1px;
   background-color: var(--color-white);
-  position: relative;
+  position: absolute;
   left: 90px;
+  top: 107px;
   margin: 4px;
 }
 
@@ -494,4 +495,82 @@ a {
   color: var(--color-light-white);
   font-size: var(--font-micro);
   margin-bottom: 30px;
+}
+
+/* Navbar toggle */
+
+.navbar__toggle {
+  color: var(--color-white);
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  right: 15px;
+  display: none;
+}
+
+/*  For below 768px screen width*/
+@media screen and (max-width: 768px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    padding-top: 18px;
+  }
+  .navbar__toggle {
+    display: block;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    width: 85%;
+    padding: 8px 0;
+    display: none;
+  }
+
+  .navbar__menu__item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .home__description {
+    text-align: center;
+  }
+
+  /* About */
+  .about__majors {
+    flex-direction: column;
+  }
+
+  /* Skills */
+  #skills {
+    height: 800px;
+  }
+
+  .skillset {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  }
+  .tools {
+    padding-bottom: 10px;
+  }
+  .etc {
+    padding-bottom: 10px;
+  }
+
+  .work__categories {
+    width: 90%;
+    margin: auto;
+  }
+
+  .project {
+    flex-grow: 1;
+  }
+  .testimonial__avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .project__description h3:after {
+    left: 195px;
+  }
 }
