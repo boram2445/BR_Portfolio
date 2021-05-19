@@ -11,6 +11,7 @@
   --color-light-grey: #7c7979;
   --color-blue: #73aace;
   --color-yellow: #fff7d1;
+  --color-realyellow: #ffde2b;
   --color-orange: #feb546;
   --color-black: #000000;
   --color-darkblue: #1b2353;
@@ -60,6 +61,7 @@ h1 {
   font-size: var(--font-large);
   font-weight: var(--weight-bold);
   color: var(--color-black);
+  margin: 25px;
 }
 
 h2 {
@@ -324,4 +326,172 @@ a {
 .etc {
   flex-basis: 40%;
   background-color: var(--color-light-grey);
+}
+
+/* My works */
+#work {
+  padding-top: 20px;
+  padding-bottom: 70px;
+}
+
+.work__categories {
+  margin: 40px 0;
+}
+
+.category__btn {
+  font-size: var(--font-regular);
+  font-weight: var(--weight-regular);
+  border: 2px solid var(--color-light-white);
+  border-radius: 6px;
+  padding: 8px 35px;
+}
+
+.category__btn.active,
+.category__btn:hover {
+  background-color: var(--color-darkblue);
+  transition: all ease 500ms;
+  color: var(--color-white);
+}
+
+.category__count {
+  background-color: var(--color-orange);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: var(--color-white);
+  display: inline-block;
+  line-height: 20px;
+  margin-left: 4px;
+  position: relative;
+  top: -20px;
+  left: 4px;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+.category__btn.active .category__count,
+.category__btn:hover .category__count {
+  opacity: 1;
+  top: 0px;
+}
+
+.project {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  background-color: var(--color-light-white);
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project__img {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.work__projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.project__description {
+  background-color: var(--color-black);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+  transition: all 500ms ease;
+}
+
+.project:hover .project__description {
+  opacity: 0.8;
+}
+
+.project__description h3:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: var(--color-white);
+  position: relative;
+  left: 90px;
+  margin: 4px;
+}
+
+.project__description h3 {
+  color: var(--color-white);
+}
+
+/* Testimonial */
+#testimonials {
+  background-color: var(--color-light-white);
+  padding: 20px;
+}
+
+.testimonial {
+  display: flex;
+  padding: 20px;
+}
+
+.testimonial__avatar {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
+}
+
+.testimonial__speech {
+  background-color: var(--color-white);
+  margin: 10px 25px;
+  padding: 10px;
+  color: var(--color-dark-grey);
+}
+
+.testimonial__speech p {
+  color: var(--color-dark-grey);
+  font-size: var(--font-small);
+}
+.person a {
+  color: var(--color-dark-pink);
+}
+
+/* Contact*/
+#contact {
+  background-color: var(--color-darkblue);
+  padding: 50px;
+}
+
+.contact__title {
+  color: var(--color-white);
+}
+
+.contact__email {
+  color: var(--color-white);
+}
+
+.contact__icons i {
+  font-size: 40px;
+  margin: 15px 5px;
+}
+
+.contact__icon:hover {
+  color: var(--color-realyellow);
+  transform: scale(1.1);
+  transition: all 500ms ease;
+}
+
+.contact__rights {
+  color: var(--color-light-white);
+  font-size: var(--font-micro);
+  margin-bottom: 30px;
 }
