@@ -175,14 +175,14 @@
         <h1>My work</h1>
         <p>Projects</p>
         <div class="work__categories">
-            <button class="category__btn active">All<span class="category__count">8</span></button>
-            <button class="category__btn">Front-end<span class="category__count">3</span></button>
-            <button class="category__btn">UI & UX<span class="category__count">3</span></button>
-            <button class="category__btn">Back-end<span class="category__count">2</span></button>
+            <button class="category__btn active" data-filter="all">All<span class="category__count">8</span></button>
+            <button class="category__btn" data-filter="front">Front-end<span class="category__count">3</span></button>
+            <button class="category__btn" data-filter="ui">UI & UX<span class="category__count">3</span></button>
+            <button class="category__btn" data-filter="back">Back-end<span class="category__count">2</span></button>
         </div>
         <div class="work__projects">
             
-            <div class="project">
+            <div class="project" data-target="front">
                 <a href="" class="project__git"></a>
                 <img src="imgs/project1.png" alt="" class="project__img">
                 <div class="project__description">
@@ -190,7 +190,7 @@
                     <span>Clone coding with HTML</span>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-target="front">
                 <a href="" class="project__git"></a>
                 <img src="imgs/project2.png" alt="" class="project__img">
                 <div class="project__description">
@@ -198,7 +198,7 @@
                     <span>Clone coding with HTML</span>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-target="ui">
                 <a href="" class="project__git"></a>
                 <img src="imgs/project3.png" alt="" class="project__img">
                 <div class="project__description">
@@ -206,7 +206,7 @@
                     <span>Clone coding with HTML</span>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-target="back">
                 <a href="" class="project__git"></a>
                 <img src="imgs/project4.png" alt="" class="project__img">
                 <div class="project__description">
@@ -214,7 +214,7 @@
                     <span>Clone coding with HTML</span>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-target="front">
                 <a href="" class="project__git"></a>
                 <img src="imgs/project5.png" alt="" class="project__img">
                 <div class="project__description">
@@ -222,7 +222,7 @@
                     <span>Clone coding with HTML</span>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-target="ui">
                 <a href="" class="project__git"></a>
                 <img src="imgs/project6.png" alt="" class="project__img">
                 <div class="project__description">
@@ -230,7 +230,7 @@
                     <span>Clone coding with HTML</span>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-target="back"> 
                 <a href="" class="project__git"></a>
                 <img src="imgs/project7.png" alt="" class="project__img">
                 <div class="project__description">
@@ -238,7 +238,7 @@
                     <span>Clone coding with HTML</span>
                 </div>
             </div>
-            <div class="project">
+            <div class="project" data-target="back">
                 <a href="" class="project__git"></a>
                 <img src="imgs/project8.png" alt="" class="project__img">
                 <div class="project__description">
@@ -294,5 +294,11 @@
 
 
     </section>
+
+    <!-- Arrow -->
+    <button class="arrow">
+        <i class="fas fa-arrow-circle-up fa-4x" ></i>
+    </button>
+    
 </body>
 </html>
