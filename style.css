@@ -129,6 +129,7 @@ a {
   margin: 10px;
   border-radius: 4px;
   padding: 7px;
+  border: 1px solid transparent;
 }
 
 .navbar__menu__item.active {
@@ -391,7 +392,6 @@ a {
 }
 
 .project {
-  position: relative;
   width: 220px;
   height: 220px;
   background-color: var(--color-light-white);
@@ -400,6 +400,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .project.invisible {
@@ -448,17 +449,17 @@ a {
 .project__description h3:after {
   content: "";
   display: block;
-  width: 30px;
+  position: relative;
+  left: 50%;
+  margin-left: -120px;
+  margin-top: 3px;
+  width: 50px;
   height: 1px;
   background-color: var(--color-white);
-  position: absolute;
-  left: 90px;
-  top: 107px;
-  margin: 4px;
 }
 
 .project__description h3 {
-  color: var(--color-white);
+  color: var(--color-realyellow);
 }
 
 /* Testimonial */
@@ -530,20 +531,24 @@ a {
   color: var(--color-white);
   font-size: 20px;
   position: absolute;
-  top: 20px;
+  top: 18px;
   right: 15px;
   display: none;
 }
 
 /*  For below 768px screen width*/
 @media screen and (max-width: 768px) {
+  .navbar__toggle {
+    display: block;
+    cursor: pointer;
+  }
+
   #navbar {
+    background-color: var(--color-darkblue);
     display: flex;
     flex-direction: column;
     padding: 15px 0;
-  }
-  .navbar__toggle {
-    display: block;
+    z-index: 2;
   }
 
   .navbar__menu {
@@ -551,6 +556,10 @@ a {
     width: 85%;
     padding: 8px 0;
     display: none;
+  }
+
+  .navbar__menu.visible {
+    display: block;
   }
 
   .navbar__menu__item {
@@ -592,13 +601,13 @@ a {
   .project {
     flex-grow: 1;
   }
+
+  .project h3 {
+    color: var(--color-orange);
+  }
   .testimonial__avatar {
     width: 100px;
     height: 100px;
-  }
-
-  .project__description h3:after {
-    left: 195px;
   }
 }
 
@@ -619,4 +628,8 @@ a {
 .arrow:hover {
   transform: scale(1.1);
   color: var(--color-realyellow);
+}
+
+.project__description h3:after {
+  margin-left: -28px;
 }

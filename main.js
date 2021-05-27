@@ -17,6 +17,9 @@ document.addEventListener('scroll', ()=>{
 function scrollIntoView(selector){
     const target = document.querySelector(`#${selector}`);
     target.scrollIntoView({behavior:"smooth",block:"center"});
+    if(navbarMenu.classList.contains('visible')){
+        navbarMenu.classList.remove('visible');
+    }
 }
 
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -27,14 +30,16 @@ navbarMenu.addEventListener('click', (event)=>{
         return;
     } 
     scrollIntoView(data);
-
-    for(let i of navbarMenu.children){
-        if(i.classList.contains('active')){
-            i.classList.remove('active');
-        }
-    }
+    const active = document.querySelector('.navbar__menu__item.active');
+    active.classList.remove('active');
     menu.classList.add('active');
-    
+})
+
+//When click toggle btn, show navbar menu
+const toggleBtn = document.querySelector('.navbar__toggle');
+console.log(navbarMenu);
+toggleBtn.addEventListener('click', ()=>{
+    navbarMenu.classList.toggle('visible');
 })
 
 //Handle Contact me button
@@ -61,11 +66,9 @@ document.addEventListener('scroll',()=>{
         arrow.classList.remove('visible');
     }
 })
-
 arrow.addEventListener('click',()=>{
     scrollIntoView('home');
 })
-
 
 //Project filtering & animation
 const category = document.querySelector('.work__categories');
@@ -77,15 +80,14 @@ category.addEventListener('click',(event)=>{
         return;
     } 
 
-    projectContainer.classList.add('anim-out');
+    //Remove selection from the previous item and select btn
+    const active = document.querySelector('.category__btn.active');
+    active.classList.remove('active');
+    const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+    target.classList.add('active');
 
-    for(let i of category.children){
-        if(i.classList.contains('active')){
-            i.classList.remove('active');
-        }
-    }
-    event.target.classList.add('active');
-    
+    //Animating project container
+    projectContainer.classList.add('anim-out');
     setTimeout(()=>{
         for(let project of projects){
             const data = project.dataset.target;
@@ -100,3 +102,4 @@ category.addEventListener('click',(event)=>{
         projectContainer.classList.remove('anim-out');
     },300);
 })
+
