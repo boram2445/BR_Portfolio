@@ -145,7 +145,7 @@ a {
 
 /* Home */
 #home {
-  background: center/cover no-repeat url(/imgs/background_img.png);
+  background: center/cover no-repeat url(imgs/background_img.png);
   display: flex;
   flex-direction: column;
   align-items: center;
