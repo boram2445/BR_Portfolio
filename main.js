@@ -16,7 +16,7 @@ document.addEventListener('scroll', ()=>{
 //Handle scrolling when tapping on the navbar menu
 function scrollIntoView(selector){
     const target = document.querySelector(`#${selector}`);
-    target.scrollIntoView({behavior:"smooth",block:"center"});
+    target.scrollIntoView({behavior:"smooth",block:"start"});
     if(navbarMenu.classList.contains('visible')){
         navbarMenu.classList.remove('visible');
     }
@@ -37,7 +37,6 @@ navbarMenu.addEventListener('click', (event)=>{
 
 //When click toggle btn, show navbar menu
 const toggleBtn = document.querySelector('.navbar__toggle');
-console.log(navbarMenu);
 toggleBtn.addEventListener('click', ()=>{
     navbarMenu.classList.toggle('visible');
 })
@@ -103,3 +102,27 @@ category.addEventListener('click',(event)=>{
     },300);
 })
 
+
+//Change navbar filter when scrolling
+const navbars = document.querySelectorAll('.navbar__menu__item');
+const sections = document.querySelectorAll('section');
+const options = {
+    threshold:0.5,
+};
+
+const callback = (entries, observer) =>{
+    entries.forEach(entry=>{
+        if(entry.isIntersecting){
+            navbars.forEach(navbar => {
+                if(navbar.dataset.name === entry.target.getAttribute('id')){
+                    navbar.classList.add('active');
+                } else{
+                    navbar.classList.remove('active');
+                }
+            })
+            console.log(entry.target.getAttribute('id'));
+        }
+    })
+}
+const observer = new IntersectionObserver(callback ,options);
+sections.forEach(section => observer.observe(section));

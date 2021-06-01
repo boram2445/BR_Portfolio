@@ -83,7 +83,7 @@ p {
   font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
-  margin: 4px 0;
+  margin: 4px 8px;
 }
 
 /* Navbar */
@@ -538,6 +538,16 @@ a {
 
 /*  For below 768px screen width*/
 @media screen and (max-width: 768px) {
+  h1 {
+    font-size: 35px;
+    margin: 24px;
+  }
+
+  .section {
+    padding-top: 50px;
+  }
+
+  /* navbar */
   .navbar__toggle {
     display: block;
     cursor: pointer;
@@ -549,6 +559,7 @@ a {
     flex-direction: column;
     padding: 15px 0;
     z-index: 2;
+    width: 100vw;
   }
 
   .navbar__menu {
@@ -567,8 +578,27 @@ a {
     text-align: center;
   }
 
+  /* home */
+
+  .section.container {
+    margin: 0 16px;
+  }
+
+  .home__title {
+    text-align: center;
+    font-size: 35px;
+  }
+
+  .home__description {
+    font-size: 26px;
+  }
+
   .home__description {
     text-align: center;
+  }
+
+  .home__description {
+    padding: 16px;
   }
 
   /* About */
@@ -578,13 +608,18 @@ a {
 
   /* Skills */
   #skills {
-    height: 800px;
+    height: 900px;
+    margin-top: 0;
+  }
+
+  #skills.section {
+    padding: 0;
   }
 
   .skillset {
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 90vw;
   }
   .tools {
     padding-bottom: 10px;
@@ -593,9 +628,20 @@ a {
     padding-bottom: 10px;
   }
 
+  /* work */
+  #work.section.container {
+    padding-bottom: 30px;
+  }
+  .category__btn {
+    font-size: 15px;
+    padding: 10px 23px;
+  }
   .work__categories {
-    width: 90%;
-    margin: auto;
+    width: 95%;
+    margin: 14px auto;
+  }
+  .work__projects {
+    margin: 0;
   }
 
   .project {
@@ -605,9 +651,25 @@ a {
   .project h3 {
     color: var(--color-orange);
   }
+
+  .testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin-top: 12px;
+  }
   .testimonial__avatar {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+  }
+
+  .testimonial__speech {
+    margin: 10px 0;
+  }
+
+  .contact__email {
+    font-size: 25px;
   }
 }
 
