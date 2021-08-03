@@ -44,6 +44,7 @@ body {
 a {
   text-decoration: none;
 }
+
 ul {
   margin: 0;
   list-style: none;
@@ -57,6 +58,36 @@ button {
   outline: none;
 }
 
+.word_color1 {
+  color: #ff6863;
+  font-weight: 600;
+}
+
+.word_color2 {
+  color: #feb546;
+  font-weight: 600;
+}
+
+.describe_p {
+  font-size: 16px;
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
+.project_name {
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.project_a {
+  color: #3caea3;
+  font-weight: 600;
+}
+
+.project_a:hover {
+  color: #1b2353;
+}
 /* Typhography */
 h1 {
   font-size: var(--font-large);
@@ -169,6 +200,12 @@ a {
 .home__title,
 .home__description {
   color: var(--color-white);
+}
+
+.home__title {
+  font-size: 44px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .home__contact {
