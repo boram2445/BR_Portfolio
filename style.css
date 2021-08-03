@@ -73,6 +73,7 @@ button {
   max-width: 800px;
   text-align: center;
   margin: auto;
+  margin-bottom: 20px;
 }
 
 .project_name {
@@ -115,6 +116,12 @@ p {
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 8px;
+}
+
+video {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: center;
 }
 
 /* Navbar */
@@ -500,12 +507,12 @@ a {
 }
 
 /* Testimonial */
-#testimonials {
+#more-info {
   background-color: var(--color-light-white);
   padding: 20px;
 }
 
-.testimonial {
+.more-info {
   display: flex;
   padding: 20px;
 }
