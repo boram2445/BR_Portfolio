@@ -89,6 +89,20 @@ button {
 .project_a:hover {
   color: #1b2353;
 }
+
+.video_1,
+.video_2 {
+  width: 100%;
+  max-width: 850px;
+  height: auto;
+}
+
+.video_3 {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+}
+
 /* Typhography */
 h1 {
   font-size: var(--font-large);
